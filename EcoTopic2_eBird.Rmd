@@ -1,0 +1,106 @@
+---
+title: "EcoTopic2_eBird"
+author: "Stellah"
+date: "2026-03-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Research Question: 
+How is noise pollution related to population distribution of birds across NY state? 
+
+Hypotheses: 
+
+Increased proximity to noise pollution will be associated with a decreased bird population as noise pollution can disrupt breeding and communication of birds as well as increase stress levels. 
+
+Increased volume of noise pollution will be associated with a decreased bird population as higher volumes of noise pollution are more disruptful to breeding and communication of birds as well as increasing stress. 
+
+
+```{r}
+#general definitions:
+##NP = noise pollution 
+```
+
+Library
+```{r}
+#library any new packages we need to analyze 
+#comment what the package will be used for 
+```
+
+Loading Data
+```{r}
+#load in data 
+##NP -- DOT Transportation 2020, clipping NYS
+##EBird -- NY State data for 2020
+##Counties -- NY State country boundaries
+
+##naming convention is all lowercase with underscores and use "data" at end for raw data 
+
+#head() all of these datasets to get a feel for their contents 
+```
+
+NP Histogram
+```{r}
+#make a histogram of the distribution of decibels of NP in NY to understand the data
+
+#are there clear bin lines that we can create to create an index for NP? Then could use that throughout our analysis to simplify the NP data -- if yes, explore with boxplots
+```
+
+NP aggregation by county & mapping
+```{r}
+#aggregate NP by county in NY 
+
+#map decibels of NP across NY by county 
+```
+
+Bird aggregation by county investigation
+```{r}
+#basic map of all bird sightings in NY in 2020 to see if aggregating by county (which we suspect will be effective) is actually a good way to group the data
+
+#aggregate bird sightings by county 
+
+#make a histogram of the distribution of bird observations by county
+
+#make a bivariate map of the bird count and NP by county 
+```
+
+Exploring overall linear relationship
+```{r}
+#create a scatterplot for the relationship between noise pollution and bird sightings (expecting a negative linear relationship)
+
+#run a lm on this relationship 
+```
+
+Diving into specific species  
+```{r}
+#find the top 5 most common birds in the dataset and compare them 
+
+#create boxplots for the relationship between noise pollution index and each species count (differentiate by color)
+```
+
+NYC Case Study 
+```{r}
+##make a histogram of the distribution of decibels of NP in NYC to understand the data
+
+###may need to create a new index for this -- as NYC will be louder than the rest of NY
+
+#map all bird sightings to familiarize with distribution across the city  
+###maybe by county with all points on top of that -- group by (county) -- and fill with color based on count  
+
+#create scatterplot for the relationship between NP and bird sightings 
+
+##run a lm on this^^^ relationship
+
+#create boxplots for the relationship between NP Index and bird count 
+
+
+##dive into the 5 most common birds analyzed above (same species)
+
+###create boxplots for the relationship between NP index and each species count (differentiate by color)
+```
+
